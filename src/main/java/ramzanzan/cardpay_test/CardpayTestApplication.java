@@ -1,0 +1,13 @@
+package ramzanzan.cardpay_test;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CardpayTestApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(CardpayTestApplication.class, args);
+    }
+
+}
