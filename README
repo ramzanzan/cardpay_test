@@ -2,14 +2,14 @@ The problem was solved in two ways:
 
 1)  Spring Batch
 
-    run: mvn clean install && java -jar -Dspring.profiles.active = batch file ...
+    run: mvn clean package && java -jar target/*jar -Dspring.profiles.active=batch file
 
     Initially it was thought that Spring Batch would be the best choice.
-    But it's impossible to implement Producer-Consumer pattern with multiply consumers within springBatch.Step,
-    it can be done for flat files but not for something structured without reimplementing half of the framework.
+    But it's impossible to implement Producer-Consumer pattern with multiply consumers
+        within springBatch.Step without ruining it's philosophy.
 
 2)  Homemade
 
-    run: mvn clean install && java -jar file ...
+    run: mvn clean package && java -jar target/*jar file
 
     reader-processors-writer threads linked by queues.
